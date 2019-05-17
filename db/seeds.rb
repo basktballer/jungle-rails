@@ -132,5 +132,32 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## Reviews
+
+puts "Creating Reviews ..."
+
+Product.first.reviews.create({
+  user_id: 1,
+  description: "This is good!",
+  rating: 4
+})
+
+Product.second.reviews.create({
+  user_id: 1,
+  description: "This product is ok!",
+  rating: 3
+})
+
+Product.third.reviews.create({
+  user_id: 1,
+  description: "This is meh!",
+  rating: 2
+})
+
+Product.fourth.reviews.create({
+  user_id: 1,
+  description: "This is awesome!",
+  rating: 5
+})
 
 puts "DONE!"

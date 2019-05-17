@@ -26,6 +26,28 @@
       </div>
     </div>
 
+    <br/>
+    <br/>
+    <h3>Reviews</h3>
+    <% if @product.reviews.length == 0 %>
+      <div class="row">
+
+        <div class="col-sm-4">
+        </div>
+
+        <div class="col-sm-8">
+          <dl class="dl-horizontal">
+            <dt></dt>
+            <dd>No reviews yet! Be the first!</dd>
+          </dl>
+        </div>
+      </div>
+    <% end %>
+
+    <% @product.reviews.each do |review| %>
+      <%=render 'review', review: review %>
+    <% end %>
+
   </article>
 
 </section>
