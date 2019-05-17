@@ -45,7 +45,7 @@
     <% end %>
 
     <% @product.reviews.each do |review| %>
-      <%=render 'review', review: review %>
+      <%=render 'review', review: review, blankstars: 5-review.rating %>
     <% end %>
 
   </article>

@@ -6,11 +6,18 @@
     <dl class="dl-horizontal">
       <dt>User ID</dt>
       <dd><%= review.user_id %></dd>
-      <dt>Description</dt>
+      <dt>Review</dt>
       <dd><%= review.description %></dd>
       <dt>Rating</dt>
-      <dd><%= review.rating %></dd>
-      <dt>Date</dt>
+      <dd>
+        <% review.rating.times do  %>
+          <span class="glyphicon glyphicon-star"></span>
+        <% end %>
+        <% blankstars.times do  %>
+          <span class="glyphicon glyphicon-star-empty"></span>
+        <% end %>
+      </dd>
+      <dt>Date Reviewed</dt>
       <dd><%= review.created_at %></dd>
     </dl>
   </div>
