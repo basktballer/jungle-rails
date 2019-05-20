@@ -29,6 +29,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Screenshots
 
+<<<<<<< HEAD
 !['Screenshot Of Main Page'](https://github.com/basktballer/jungle-rails/blob/master/docs/main.png)
 
 !['Screenshot Of Detailed Product'](https://github.com/basktballer/jungle-rails/blob/master/docs/detail_product.png)
@@ -36,3 +37,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 !['Screenshot Of Writing Review'](https://github.com/basktballer/jungle-rails/blob/master/docs/review.png)
 
 !['Screenshot Of Order Summary'](https://github.com/basktballer/jungle-rails/blob/master/docs/order_summary.png)
+=======
+
+>>>>>>> feature/user-specs
