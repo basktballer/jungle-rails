@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  subject { described_class.new( name: "test name", price: 200, quantity: 200, category: Category.first.name)}
   describe 'Validations' do
 
     before do 
