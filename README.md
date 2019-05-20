@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example.
 
 
 ## Setup
@@ -26,3 +26,13 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Screenshots
+
+!['Screenshot Of Main Page'](https://github.com/basktballer/jungle-rails/blob/master/docs/main.png)
+
+!['Screenshot Of Detailed Product'](https://github.com/basktballer/jungle-rails/blob/master/docs/detail_product.png)
+
+!['Screenshot Of Writing Review'](https://github.com/basktballer/jungle-rails/blob/master/docs/review.png)
+
+!['Screenshot Of Order Summary'](https://github.com/basktballer/jungle-rails/blob/master/docs/order_summary.png)
