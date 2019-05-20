@@ -8,6 +8,15 @@
   <p class="description">
     <%= product.description %>
   </p>
+  <p class="rating">
+    Average Rating: 
+    <% product.avg_rating.times do  %>
+      <span class="glyphicon glyphicon-star"></span>
+    <% end %>
+    <% (5 - product.avg_rating).times do  %>
+      <span class="glyphicon glyphicon-star-empty"></span>
+    <% end %>
+  </p>
   <footer class="actions">
     <%= button_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary' , method: :post do %>
       <%= fa_icon "shopping-cart", text: 'Add' %>
@@ -20,7 +29,7 @@
   <aside class="price">
     <%= humanized_money_with_symbol product.price %>
   </aside>
-  <% if product.quantity <= 0 %>
+  <% if product.sold_out? %>
     <aside class="soldout">
       SOLD OUT!
     </aside>

@@ -2,6 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "rails_bootstrap_forms";
 
 // App
 @import "products";
@@ -14,4 +15,12 @@ body {
 // Bootstrap adjustments
 form.button_to {
   display: inline;
+}
+
+.login-status {
+  line-height: 20px;
+  position: relative;
+  display: block;
+  padding: 15px 15px;
+  font-weight: bold;
 }

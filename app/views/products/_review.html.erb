@@ -17,8 +17,14 @@
           <span class="glyphicon glyphicon-star-empty"></span>
         <% end %>
       </dd>
-      <dt>Date Reviewed</dt>
-      <dd><%= review.created_at %></dd>
+        <dt>Date Reviewed</dt>
+        <dd><%= review.created_at %></dd>
+      <% if current_user && current_user.id == review.user_id  %>
+        <dt/>
+        <dd>
+          <%= link_to '<i class="glyphicon glyphicon-trash"></i> Delete Comment'.html_safe, [@product, review], class: "btn btn-primary", data: {:confirm => 'Are you sure?'}, :method => :delete %>
+        </dd>
+      <% end %>
     </dl>
   </div>
 </div>

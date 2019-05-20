@@ -1,11 +1,15 @@
 <h1> Sign up!</h1>
 
-<%= form_for :user, url: '/users' do |f| %>
+<% if notice %>
+  <div class="alert alert-info" role="alert" id="notice"><%= notice %></div>
+  <br/>
+<% end %>
 
-  Name: <%= f.text_field :name %><br>
-  Email: <%= f.text_field :email %><br>
-  Password: <%= f.password_field :password %><br>
-  Password Confirmation: <%= f.password_field :password_confirmation %><br>
+<%=  bootstrap_form_for :user, url: '/users' do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :email %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
   <%= f.submit "Submit" %>
 
 <% end %>
