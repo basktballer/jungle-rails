@@ -15,10 +15,9 @@ class User < ActiveRecord::Base
     length: { minimum: 3 }
   has_secure_password
   
-  def authenticate_with_credentials(email, pw)
-    user = User.find_by_email(email.strip.downcase)
-    if user && user.authenticate(pw)
-      user
+  def authenticate_with_credentials(pw)
+    if self.authenticate(pw)
+      self
     else
       nil
     end
