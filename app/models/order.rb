@@ -7,6 +7,18 @@ class Order < ActiveRecord::Base
   monetize :total_cents, numericality: true
 
   validates :stripe_charge_id, presence: true
+
+  after_create :update_inventory
+
+
+  def update_inventory
+    self.line_items.each do |item| 
+      product = Product.find_by(id: item.product.id)
+      original = product.quantity
+      product.update(quantity: (original - item.quantity))
+    end
+  end
+
   
   # def line_items
   #   LineItem.where(order_id: id)
